@@ -11,6 +11,8 @@ function UserCard({
   children,
 }) {
   console.log("Children:", children);
+  const myName = "Joaquin";
+
   return (
     <div className="card">
       <p>Nombre: {name}</p>

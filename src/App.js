@@ -1,11 +1,11 @@
 import "./App.css";
-import CardContainer from "./components/CardContainer";
+import EstaLloviendo from "./components/EstaLloviendo";
 
 function App() {
   return (
     <div className="App">
       <h1>Holis!</h1>
-      <CardContainer />
+      <EstaLloviendo />
     </div>
   );
 }
