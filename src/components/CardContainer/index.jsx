@@ -1,48 +1,28 @@
-import UserCard from "../UserCard";
+import { useEffect, useState } from "react";
+import { getProductos } from "../../baseDeDatos";
+import Item from "../Item";
 
-const CardContainer = ({ children, name }) => {
-  const saludar = () => {
-    console.log("Holis :D");
-  };
-  const isAdult = (age) => {
-    return age >= 18;
-  };
+const CardContainer = () => {
+  const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    setIsLoading(true);
+    getProductos()
+      .then((data) => setProducts(data))
+      .catch((error) => console.error(error))
+      .finally(() => setIsLoading(false));
+  }, []);
+
   return (
-    <>
-      <UserCard
-        age={40 + 40}
-        job="Arquitecto"
-        hobbies={["futbol", "codear"]}
-        saludar={saludar}
-        elemento={<p>Esto viene del componente padre</p>}
-        isAdult={isAdult(40)}
-        name={name}
-      >
-        Esto también es un children
-      </UserCard>
-      <UserCard
-        name="Felipe"
-        age={40 + 40}
-        job="Arquitecto"
-        hobbies={["futbol", "codear"]}
-        saludar={saludar}
-        elemento={<p>Esto viene del componente padre</p>}
-        isAdult={isAdult(40)}
-      >
-        Esto también es un children
-      </UserCard>{" "}
-      <UserCard
-        name="Felipe"
-        age={40 + 40}
-        job="Arquitecto"
-        hobbies={["futbol", "codear"]}
-        saludar={saludar}
-        elemento={<p>Esto viene del componente padre</p>}
-        isAdult={isAdult(40)}
-      >
-        Esto también es un children
-      </UserCard>
-    </>
+    <div className="App">
+      <h1>Holis!</h1>
+      {isLoading ? (
+        <p>Cargando...</p>
+      ) : (
+        products.map((product) => <Item key={product.id} product={product} />)
+      )}
+    </div>
   );
 };
 export default CardContainer;

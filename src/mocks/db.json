@@ -1,0 +1,84 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "name": "Zapatillas",
+      "price": 10001,
+      "description": "Esta es la descripción del producto número 1 ",
+      "stock": 1001,
+      "img": "https://picsum.photos/200"
+    },
+    {
+      "id": 2,
+      "name": "Zapatillas",
+      "price": 10002,
+      "description": "Esta es la descripción del producto número 2",
+      "stock": 1002,
+      "img": "https://picsum.photos/200"
+    },
+    {
+      "id": 3,
+      "name": "Zapatillas",
+      "price": 10003,
+      "description": "Esta es la descripción del producto número 3",
+      "stock": 1003,
+      "img": "https://picsum.photos/200"
+    },
+    {
+      "id": 4,
+      "name": "Zapatillas",
+      "price": 10004,
+      "description": "Esta es la descripción del producto número 4",
+      "stock": 1004,
+      "img": "https://picsum.photos/200"
+    },
+    {
+      "id": 5,
+      "name": "Zapatillas",
+      "price": 10005,
+      "description": "Esta es la descripción del producto número 5",
+      "stock": 1005,
+      "img": "https://picsum.photos/200"
+    },
+    {
+      "id": 6,
+      "name": "Zapatillas",
+      "price": 10006,
+      "description": "Esta es la descripción del producto número 6",
+      "stock": 1006,
+      "img": "https://picsum.photos/200"
+    },
+    {
+      "id": 7,
+      "name": "Zapatillas",
+      "price": 10007,
+      "description": "Esta es la descripción del producto número 7",
+      "stock": 1007,
+      "img": "https://picsum.photos/200"
+    },
+    {
+      "id": 8,
+      "name": "Zapatillas",
+      "price": 10008,
+      "description": "Esta es la descripción del producto número 8",
+      "stock": 1008,
+      "img": "https://picsum.photos/200"
+    },
+    {
+      "id": 9,
+      "name": "Zapatillas",
+      "price": 10009,
+      "description": "Esta es la descripción del producto número 9",
+      "stock": 1009,
+      "img": "https://picsum.photos/200"
+    },
+    {
+      "name": "Campera",
+      "price": 100010,
+      "description": "Esta es la descripción del producto número 10 ",
+      "stock": 10010,
+      "img": "https://picsum.photos/200",
+      "id": 10
+    }
+  ]
+}
