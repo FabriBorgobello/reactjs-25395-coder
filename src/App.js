@@ -1,6 +1,7 @@
-import "./App.css";
-import ItemContainer from "./components/ItemContainer";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.scss";
 import Navbar from "./components/Navbar";
+import ItemContainer from "./components/ItemContainer";
 
 function App() {
   return (

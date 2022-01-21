@@ -1,0 +1,14 @@
+.item-card {
+  border: 1px solid red;
+  width: 300px;
+  .img-container {
+    height: 50%;
+    background-color: blue;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+}

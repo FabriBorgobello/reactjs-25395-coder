@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Item from "../Item";
+import "./styles.scss";
 
 const URL = "http://localhost:3001/productos";
 
@@ -17,24 +18,6 @@ const ItemContainer = () => {
       .finally(() => setIsLoading(false));
   }, []);
 
-  const createProduct = async () => {
-    const newProduct = {
-      name: "Campera",
-      price: 100010,
-      description: "Esta es la descripción del producto número 10 ",
-      stock: 10010,
-      img: "https://picsum.photos/200",
-    };
-
-    const response = await fetch(URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(newProduct),
-    });
-
-    return response.json();
-  };
-
   if (isLoading) {
     return <p>Cargando los poke...</p>;
   } else if (error) {
@@ -42,8 +25,7 @@ const ItemContainer = () => {
   } else
     return (
       <div>
-        <button onClick={createProduct}>Crear nuevo producto</button>
-        <ul>
+        <ul className="item-container">
           {poke.map((product) => {
             return <Item key={product.id} product={product} />;
           })}

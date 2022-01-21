@@ -80,5 +80,57 @@
       "img": "https://picsum.photos/200",
       "id": 10
     }
+  ],
+  "usuarios": [
+    {
+      "id": 0,
+      "nombre": "Juan",
+      "edad": 15
+    },
+    {
+      "id": 1,
+      "nombre": "Martin",
+      "edad": 16
+    },
+    {
+      "id": 3,
+      "nombre": "Lucia",
+      "edad": 18
+    },
+    {
+      "id": 4,
+      "nombre": "Mariana",
+      "edad": 19
+    },
+    {
+      "id": 5,
+      "nombre": "Rodrigo",
+      "edad": 20
+    },
+    {
+      "id": 6,
+      "nombre": "Lucas",
+      "edad": 21
+    },
+    {
+      "id": 7,
+      "nombre": "Nicolas",
+      "edad": 22
+    },
+    {
+      "id": 8,
+      "nombre": "Franco",
+      "edad": 23
+    },
+    {
+      "nombre": "Mariano",
+      "edad": "25",
+      "id": 10
+    },
+    {
+      "nombre": "Ricardo",
+      "edad": "56",
+      "id": 11
+    }
   ]
 }
