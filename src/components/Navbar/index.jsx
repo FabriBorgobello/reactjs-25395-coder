@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./styles.scss";
 
 const Navbar = () => {
@@ -5,9 +6,15 @@ const Navbar = () => {
     <nav className="navbar">
       <span>Mi ecommerce</span>
       <ul>
-        <li>Menu</li>
-        <li>Menu</li>
-        <li>Menu</li>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
+        <li>
+          <Link to="/products">Products</Link>
+        </li>
       </ul>
     </nav>
   );

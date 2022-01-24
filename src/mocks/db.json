@@ -10,7 +10,7 @@
     },
     {
       "id": 2,
-      "name": "Zapatillas",
+      "name": "Camperas",
       "price": 10002,
       "description": "Esta es la descripción del producto número 2",
       "stock": 1002,
@@ -18,7 +18,7 @@
     },
     {
       "id": 3,
-      "name": "Zapatillas",
+      "name": "Mochilas",
       "price": 10003,
       "description": "Esta es la descripción del producto número 3",
       "stock": 1003,
