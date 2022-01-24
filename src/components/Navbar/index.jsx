@@ -1,17 +1,13 @@
+import "./styles.scss";
+
 const Navbar = () => {
   return (
-    <nav>
+    <nav className="navbar">
       <span>Mi ecommerce</span>
       <ul>
-        <li>
-          <a href="/#">Menu</a>
-        </li>
-        <li>
-          <a href="/#">Menu</a>
-        </li>
-        <li>
-          <a href="/#">Menu</a>
-        </li>
+        <li>Menu</li>
+        <li>Menu</li>
+        <li>Menu</li>
       </ul>
     </nav>
   );
