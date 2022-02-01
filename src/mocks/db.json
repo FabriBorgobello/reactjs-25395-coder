@@ -1,4 +1,9 @@
 {
+  "user": {
+    "name": "Laura",
+    "email": "laura@email.test.com",
+    "img": "https://picsum.photos/200"
+  },
   "productos": [
     {
       "id": 1,

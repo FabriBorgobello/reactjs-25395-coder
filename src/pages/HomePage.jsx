@@ -1,51 +1,39 @@
-import useWindowSize from "../hooks/useWindowSize";
+import { useUser } from "../context/UserContext";
 
 const HomePage = () => {
-  // CUSTOM HOOK:
-  const { width, height } = useWindowSize();
+  const { data, isLoading, error, cambiarNombre } = useUser();
 
-  const handleSubmit = (evt) => {
-    evt.preventDefault();
-    console.log({
-      [evt.target[0].name]: evt.target[0].value,
-      [evt.target[1].name]: evt.target[1].value,
-    });
-  };
-  const handleClickPadre = () => {
-    console.log("Se clickeó el elemento PADRE");
-  };
-  const handleClickHijo = (evt) => {
-    evt.stopPropagation();
-    console.log("Se clickeó el elemento HIJO");
-  };
+  if (isLoading) {
+    return <p>Cargando...</p>;
+  } else if (error) {
+    return <p>Ha habido un error</p>;
+  } else
+    return (
+      <div>
+        <h1>Home</h1>
 
-  return (
-    <div>
-      <h1>Home</h1>
-      <p>Ancho: {width} </p>
-      <p>Alto: {height}</p>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="nombre">Nombre</label>
-        <input type="text" name="nombre" id="nombre" />
-        <label htmlFor="age">Edad</label>
-        <input type="number" name="age" id="age" />
-        <input type="submit" value="Enviar" />
-      </form>
+        {/* HOOK */}
+        <p>Nombre: {data.name}</p>
+        <p>Email: {data.email}</p>
+        <img src={data.img} alt={data.name} />
 
-      <div className="padre" onClick={handleClickPadre}>
-        <div className="hijo" onClick={handleClickHijo}></div>
+        <button onClick={cambiarNombre}>Cambiar nombre</button>
       </div>
-    </div>
-  );
+    );
 };
 
+{
+  /* CONSUMER */
+}
+{
+  /* <UserContext.Consumer>
+        {(value) => (
+          <div>
+            <p>Nombre: {value.name}</p>
+            <p>Email: {value.email}</p>
+            <img src={value.img} alt={name} />
+          </div>
+        )}
+      </UserContext.Consumer> */
+}
 export default HomePage;
-
-// DESAFIO
-// const vocales = ["a", "e", "i", "o", "u"];
-// const handleKeyDown = (event) => {
-//   console.log(event.key);
-//   if (vocales.includes(event.key)) {
-//     event.preventDefault();
-//   }
-// };
