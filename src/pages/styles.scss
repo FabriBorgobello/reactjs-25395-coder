@@ -1,0 +1,14 @@
+.title {
+  transition: all 0.5s ease;
+}
+
+.loading {
+  transform: translateX(0px);
+}
+.no-loading {
+  transform: translateX(200px);
+}
+
+.container {
+  border: 1px solid black;
+}

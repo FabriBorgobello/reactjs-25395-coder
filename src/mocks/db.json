@@ -11,7 +11,8 @@
       "price": 10001,
       "description": "Esta es la descripción del producto número 1 ",
       "stock": 1001,
-      "img": "https://picsum.photos/200"
+      "img": "https://picsum.photos/200",
+      "categoryId": 1
     },
     {
       "id": 2,
@@ -137,5 +138,12 @@
       "edad": "56",
       "id": 11
     }
+  ],
+  "categories": [
+    { "id": 1, "name": "Indumentaria" },
+    { "id": 2, "name": "Calzado" },
+    { "id": 3, "name": "Ropa deportiva" },
+    { "id": 4, "name": "Accesorios" },
+    { "id": 5, "name": "Gorritos" }
   ]
 }

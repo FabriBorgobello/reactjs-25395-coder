@@ -2,7 +2,6 @@ import "./App.scss";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
-import ProductsPage from "./pages/ProductsPage";
 import Navbar from "./components/Navbar";
 import VisionPage from "./pages/VisionPage";
 import MisionPage from "./pages/MisionPage";
@@ -10,6 +9,7 @@ import ProductDetailPage from "./pages/ProductDetailPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import { UserProvider } from "./context/UserContext";
 import { CartProvider } from "./context/CartContext";
+import CartPage from "./pages/CartPage";
 
 function App() {
   return (
@@ -25,9 +25,9 @@ function App() {
                 <Route path="mision" element={<MisionPage />} />
               </Route>
               <Route path="products">
-                <Route index element={<ProductsPage />} />
                 <Route path=":productId" element={<ProductDetailPage />} />
               </Route>
+              <Route path="cart" element={<CartPage />} />
               <Route path="*" element={<NotFoundPage />} />
             </Route>
           </Routes>
