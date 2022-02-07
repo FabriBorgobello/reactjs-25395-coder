@@ -24,7 +24,7 @@ const HomePage = () => {
     return <p>Ha habido un error {error.message}</p>;
   } else
     return (
-      <div>
+      <div className="home-page">
         <ul className="item-container">
           {data.map((product) => {
             return <Item key={product.id} product={product} />;
