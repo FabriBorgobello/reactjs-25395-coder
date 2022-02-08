@@ -27,6 +27,7 @@ function App() {
               <Route path="products">
                 <Route path=":productId" element={<ProductDetailPage />} />
               </Route>
+              <Route path="category/:categoryId" element={<HomePage />} />
               <Route path="cart" element={<CartPage />} />
               <Route path="*" element={<NotFoundPage />} />
             </Route>

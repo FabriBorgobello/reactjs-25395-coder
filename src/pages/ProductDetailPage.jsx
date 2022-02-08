@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../components/ItemDetail";
+import { getFirestore } from "../firebase";
 
 const ProductDetailPage = () => {
   const { productId } = useParams();
@@ -8,11 +9,17 @@ const ProductDetailPage = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    const URL = `http://localhost:3001/productos/${productId}`;
+    const db = getFirestore();
+    const productsCollection = db.collection("productos");
+    const selectedProduct = productsCollection.doc(productId);
+
     setIsLoading(true);
-    fetch(URL)
-      .then((res) => res.json())
-      .then((data) => setProduct(data))
+    selectedProduct
+      .get()
+      .then((response) => {
+        if (!response.exists) console.log("El producto no existe");
+        setProduct({ ...response.data(), id: response.id });
+      })
       .finally(() => setIsLoading(false));
   }, [productId]);
 

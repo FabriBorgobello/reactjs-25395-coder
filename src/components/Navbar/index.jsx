@@ -15,6 +15,12 @@ const Navbar = () => {
         <li>
           <Link to="/cart">Carrito</Link>
         </li>
+        <li>
+          <Link to="/category/1">Categoria 1</Link>
+        </li>
+        <li>
+          <Link to="/category/2">Categoria 2</Link>
+        </li>
       </ul>
     </nav>
   );

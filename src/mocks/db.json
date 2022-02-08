@@ -20,7 +20,8 @@
       "price": 10002,
       "description": "Esta es la descripción del producto número 2",
       "stock": 1002,
-      "img": "https://picsum.photos/200"
+      "img": "https://picsum.photos/200",
+      "categoryId": 2
     },
     {
       "id": 3,
@@ -28,7 +29,8 @@
       "price": 10003,
       "description": "Esta es la descripción del producto número 3",
       "stock": 1003,
-      "img": "https://picsum.photos/200"
+      "img": "https://picsum.photos/200",
+      "categoryId": 3
     },
     {
       "id": 4,
@@ -36,7 +38,8 @@
       "price": 10004,
       "description": "Esta es la descripción del producto número 4",
       "stock": 1004,
-      "img": "https://picsum.photos/200"
+      "img": "https://picsum.photos/200",
+      "categoryId": 4
     },
     {
       "id": 5,
@@ -44,7 +47,8 @@
       "price": 10005,
       "description": "Esta es la descripción del producto número 5",
       "stock": 1005,
-      "img": "https://picsum.photos/200"
+      "img": "https://picsum.photos/200",
+      "categoryId": 1
     },
     {
       "id": 6,
@@ -52,7 +56,8 @@
       "price": 10006,
       "description": "Esta es la descripción del producto número 6",
       "stock": 1006,
-      "img": "https://picsum.photos/200"
+      "img": "https://picsum.photos/200",
+      "categoryId": 2
     },
     {
       "id": 7,
@@ -60,7 +65,8 @@
       "price": 10007,
       "description": "Esta es la descripción del producto número 7",
       "stock": 1007,
-      "img": "https://picsum.photos/200"
+      "img": "https://picsum.photos/200",
+      "categoryId": 3
     },
     {
       "id": 8,
@@ -68,7 +74,8 @@
       "price": 10008,
       "description": "Esta es la descripción del producto número 8",
       "stock": 1008,
-      "img": "https://picsum.photos/200"
+      "img": "https://picsum.photos/200",
+      "categoryId": 4
     },
     {
       "id": 9,
@@ -76,7 +83,8 @@
       "price": 10009,
       "description": "Esta es la descripción del producto número 9",
       "stock": 1009,
-      "img": "https://picsum.photos/200"
+      "img": "https://picsum.photos/200",
+      "categoryId": 2
     },
     {
       "name": "Campera",

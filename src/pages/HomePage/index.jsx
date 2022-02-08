@@ -1,22 +1,49 @@
 import * as React from "react";
 import Item from "../../components/Item";
 import "./styles.scss";
+import { getFirestore } from "../../firebase";
+import { useParams } from "react-router-dom";
 
-const URL = "http://localhost:3001/productos";
+// const URL = "http://localhost:3001/productos";
 
 const HomePage = () => {
   const [data, setData] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(false);
   const [error, setError] = React.useState(null);
+  const { categoryId } = useParams();
 
   React.useEffect(() => {
-    setIsLoading(true);
-    fetch(URL)
-      .then((response) => response.json())
-      .then((json) => setData(json))
-      .catch((err) => setError(err))
-      .finally(() => setIsLoading(false));
-  }, []);
+    const db = getFirestore();
+    let productsCollection;
+    if (categoryId) {
+      productsCollection = db
+        .collection("productos")
+        .where("categoryId", "==", Number(categoryId));
+    } else {
+      productsCollection = db.collection("productos");
+    }
+
+    const getDataFromFirestore = async () => {
+      setIsLoading(true);
+      try {
+        const response = await productsCollection.get();
+        if (response.empty) console.log("No hay productos");
+        setData(response.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      } catch (err) {
+        setError(err);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    getDataFromFirestore();
+
+    // setIsLoading(true);
+    // fetch(URL)
+    //   .then((response) => response.json())
+    //   .then((json) => setData(json))
+    //   .catch((err) => setError(err))
+    //   .finally(() => setIsLoading(false));
+  }, [categoryId]);
 
   if (isLoading) {
     return <p>Cargando los productos...</p>;
@@ -25,6 +52,7 @@ const HomePage = () => {
   } else
     return (
       <div className="home-page">
+        <h1>Category ID: {categoryId}</h1>
         <ul className="item-container">
           {data.map((product) => {
             return <Item key={product.id} product={product} />;
