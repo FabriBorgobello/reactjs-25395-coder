@@ -10,7 +10,7 @@ const ProductDetailPage = () => {
 
   useEffect(() => {
     const db = getFirestore();
-    const productsCollection = db.collection("productos");
+    const productsCollection = db.collection("products");
     const selectedProduct = productsCollection.doc(productId);
 
     setIsLoading(true);

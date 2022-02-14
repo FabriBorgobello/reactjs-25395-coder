@@ -10,6 +10,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 import { UserProvider } from "./context/UserContext";
 import { CartProvider } from "./context/CartContext";
 import CartPage from "./pages/CartPage";
+import ThankYouPage from "./pages/ThankYouPage";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
               </Route>
               <Route path="category/:categoryId" element={<HomePage />} />
               <Route path="cart" element={<CartPage />} />
+              <Route path="thanks/:orderId" element={<ThankYouPage />} />
               <Route path="*" element={<NotFoundPage />} />
             </Route>
           </Routes>
@@ -39,10 +41,3 @@ function App() {
 }
 
 export default App;
-
-// const getPoke = async () => {
-//   const response = await fetch(URL);
-//   const json = await response.json();
-//   console.log(json);
-// };
-// getPoke();

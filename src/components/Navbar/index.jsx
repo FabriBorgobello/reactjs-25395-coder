@@ -4,7 +4,7 @@ import "./styles.scss";
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <span>Mi ecommerce</span>
+      <Link to="/">Mi ecommerce</Link>
       <ul>
         <li>
           <Link to="/">Home</Link>
