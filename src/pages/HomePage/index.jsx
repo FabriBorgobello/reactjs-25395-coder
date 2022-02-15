@@ -3,6 +3,7 @@ import Item from "../../components/Item";
 import "./styles.scss";
 import { getFirestore } from "../../firebase";
 import { useParams } from "react-router-dom";
+import Desafio from "../../components/Desafio";
 
 const HomePage = () => {
   const [data, setData] = React.useState([]);

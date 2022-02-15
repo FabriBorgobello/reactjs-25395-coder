@@ -11,6 +11,7 @@ import { UserProvider } from "./context/UserContext";
 import { CartProvider } from "./context/CartContext";
 import CartPage from "./pages/CartPage";
 import ThankYouPage from "./pages/ThankYouPage";
+import PerformancePage from "./pages/PerformancePage";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
               <Route path="category/:categoryId" element={<HomePage />} />
               <Route path="cart" element={<CartPage />} />
               <Route path="thanks/:orderId" element={<ThankYouPage />} />
+              <Route path="performance" element={<PerformancePage />} />
               <Route path="*" element={<NotFoundPage />} />
             </Route>
           </Routes>

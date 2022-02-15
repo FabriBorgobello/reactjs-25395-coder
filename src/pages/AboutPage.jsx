@@ -1,19 +1,12 @@
-import { Outlet } from "react-router-dom";
-import { getFirestore } from "../firebase";
+import useFetchData from "../hooks/useFetchData";
 
 const AboutPage = () => {
-  const updateOrder = () => {
-    const db = getFirestore();
-    const collection = db.collection("orders");
-    const element = collection.doc("IC1xBczXUXh80ypEEcQE");
+  const URL = "https://pokeapi.co/api/v2/pokemon?limit=100&offset=200";
+  const { data, isLoading, error } = useFetchData(URL);
 
-    element.delete().then((res) => console.log("Elemento eliminado", res));
-  };
   return (
     <div>
       <h1>AboutPage</h1>
-      <Outlet />
-      <button onClick={updateOrder}>Eliminar</button>
     </div>
   );
 };
